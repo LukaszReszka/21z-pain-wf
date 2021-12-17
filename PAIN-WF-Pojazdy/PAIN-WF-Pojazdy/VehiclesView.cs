@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PAIN_WF_Pojazdy
 {
-    public partial class Form1 : Form
+    public partial class VehiclesView : Form
     {
-        public Form1()
+        public VehiclesView()
         {
             InitializeComponent();
         }
