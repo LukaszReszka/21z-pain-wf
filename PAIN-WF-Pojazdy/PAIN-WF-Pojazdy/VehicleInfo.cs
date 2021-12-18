@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace PAIN_WF_Pojazdy
 {
-    public partial class mainWindow : Form
+    public partial class VehicleInfo : Form
     {
-        public mainWindow()
+        public VehicleInfo()
         {
             InitializeComponent();
-
-            VehiclesView view = new VehiclesView();
-            view.MdiParent = this;
-            view.Show();
-        }
-
-        private void quitProgramOption_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

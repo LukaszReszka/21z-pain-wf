@@ -8,3 +8,5 @@ C:\Users\JK720\OneDrive - Politechnika Warszawska\Semestr 7\PAIN\Projekt\lab4 - 
 C:\Users\JK720\OneDrive - Politechnika Warszawska\Semestr 7\PAIN\Projekt\lab4 - WF\PAIN-WF-Pojazdy\21Z-PAIN-WF\PAIN-WF-Pojazdy\PAIN-WF-Pojazdy\obj\Debug\PAIN-WF-Pojazdy.exe
 C:\Users\JK720\OneDrive - Politechnika Warszawska\Semestr 7\PAIN\Projekt\lab4 - WF\PAIN-WF-Pojazdy\21Z-PAIN-WF\PAIN-WF-Pojazdy\PAIN-WF-Pojazdy\obj\Debug\PAIN-WF-Pojazdy.pdb
 C:\Users\JK720\OneDrive - Politechnika Warszawska\Semestr 7\PAIN\Projekt\lab4 - WF\PAIN-WF-Pojazdy\21Z-PAIN-WF\PAIN-WF-Pojazdy\PAIN-WF-Pojazdy\obj\Debug\PAIN_WF_Pojazdy.mainWindow.resources
+C:\Users\JK720\OneDrive - Politechnika Warszawska\Semestr 7\PAIN\Projekt\lab4 - WF\PAIN-WF-Pojazdy\21Z-PAIN-WF\PAIN-WF-Pojazdy\PAIN-WF-Pojazdy\obj\Debug\PAIN_WF_Pojazdy.VehiclesView.resources
+C:\Users\JK720\OneDrive - Politechnika Warszawska\Semestr 7\PAIN\Projekt\lab4 - WF\PAIN-WF-Pojazdy\21Z-PAIN-WF\PAIN-WF-Pojazdy\PAIN-WF-Pojazdy\obj\Debug\PAIN_WF_Pojazdy.VehicleInfo.resources
