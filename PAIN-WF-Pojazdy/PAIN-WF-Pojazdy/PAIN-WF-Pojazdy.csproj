@@ -66,6 +66,12 @@
     <Compile Include="VehiclesView.Designer.cs">
       <DependentUpon>VehiclesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleTypeSwitcher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleTypeSwitcher.Designer.cs">
+      <DependentUpon>VehicleTypeSwitcher.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehiclesView.resx">
       <DependentUpon>VehiclesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleTypeSwitcher.resx">
+      <DependentUpon>VehicleTypeSwitcher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

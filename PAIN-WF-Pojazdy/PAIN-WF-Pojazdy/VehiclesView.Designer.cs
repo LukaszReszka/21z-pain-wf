@@ -35,7 +35,7 @@ namespace PAIN_WF_Pojazdy
             this.vehicleBrand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.maxVelocity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.productionDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.vehicleKind = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vehicleType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addRecordContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyRecordContextMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +49,7 @@ namespace PAIN_WF_Pojazdy
             this.vehicleBrand,
             this.maxVelocity,
             this.productionDate,
-            this.vehicleKind});
+            this.vehicleType});
             this.vehiclesList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vehiclesList.HideSelection = false;
             this.vehiclesList.Location = new System.Drawing.Point(0, 0);
@@ -74,10 +74,10 @@ namespace PAIN_WF_Pojazdy
             this.productionDate.Text = "Data produkcji";
             this.productionDate.Width = 120;
             // 
-            // vehicleKind
+            // vehicleType
             // 
-            this.vehicleKind.Text = "Rodzaj";
-            this.vehicleKind.Width = 120;
+            this.vehicleType.Text = "Typ pojazdu";
+            this.vehicleType.Width = 120;
             // 
             // contextMenu
             // 
@@ -130,7 +130,7 @@ namespace PAIN_WF_Pojazdy
         private System.Windows.Forms.ColumnHeader vehicleBrand;
         private System.Windows.Forms.ColumnHeader maxVelocity;
         private System.Windows.Forms.ColumnHeader productionDate;
-        private System.Windows.Forms.ColumnHeader vehicleKind;
+        private System.Windows.Forms.ColumnHeader vehicleType;
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem addRecordContextMenu;
         private System.Windows.Forms.ToolStripMenuItem modifyRecordContextMenu;
