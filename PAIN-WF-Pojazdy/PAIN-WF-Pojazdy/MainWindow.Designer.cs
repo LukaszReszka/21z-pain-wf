@@ -85,12 +85,15 @@
             this.addViewOption.Name = "addViewOption";
             this.addViewOption.Size = new System.Drawing.Size(180, 24);
             this.addViewOption.Text = "Dodaj widok";
+            this.addViewOption.Click += new System.EventHandler(this.addViewButton_Click);
             // 
             // closeViewOption
             // 
+            this.closeViewOption.Enabled = false;
             this.closeViewOption.Name = "closeViewOption";
             this.closeViewOption.Size = new System.Drawing.Size(180, 24);
             this.closeViewOption.Text = "Zamknij widok";
+            this.closeViewOption.Click += new System.EventHandler(this.closeViewButton_Click);
             // 
             // mdiOption
             // 
@@ -159,15 +162,18 @@
             this.addViewButton.Size = new System.Drawing.Size(98, 40);
             this.addViewButton.Text = "Dodaj widok";
             this.addViewButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.addViewButton.Click += new System.EventHandler(this.addViewButton_Click);
             // 
             // closeViewButton
             // 
+            this.closeViewButton.Enabled = false;
             this.closeViewButton.Image = global::PAIN_WF_Pojazdy.Properties.Resources.close_view;
             this.closeViewButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.closeViewButton.Name = "closeViewButton";
             this.closeViewButton.Size = new System.Drawing.Size(110, 40);
             this.closeViewButton.Text = "Zamknij widok";
             this.closeViewButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.closeViewButton.Click += new System.EventHandler(this.closeViewButton_Click);
             // 
             // toolBarSeparator
             // 
@@ -257,6 +263,7 @@
             this.IsMdiContainer = true;
             this.Name = "mainWindow";
             this.Text = "Pojazdy";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.toolBar.ResumeLayout(false);

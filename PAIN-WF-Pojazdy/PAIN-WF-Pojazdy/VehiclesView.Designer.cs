@@ -117,8 +117,11 @@ namespace PAIN_WF_Pojazdy
             this.ContextMenuStrip = this.contextMenu;
             this.Controls.Add(this.vehiclesList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "VehiclesView";
             this.Text = "Widok pojazdów";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VehiclesView_FormClosing);
             this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
