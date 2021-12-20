@@ -1,6 +1,6 @@
 ﻿namespace PAIN_WF_Pojazdy
 {
-    partial class mainWindow
+    partial class MainWindow
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,30 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.viewOption = new System.Windows.Forms.ToolStripMenuItem();
             this.addViewOption = new System.Windows.Forms.ToolStripMenuItem();
             this.closeViewOption = new System.Windows.Forms.ToolStripMenuItem();
             this.mdiOption = new System.Windows.Forms.ToolStripMenuItem();
-            this.recordOption = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRecordOption = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifyRecordOption = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteRecordOption = new System.Windows.Forms.ToolStripMenuItem();
             this.quitProgramOption = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBar = new System.Windows.Forms.ToolStrip();
             this.addViewButton = new System.Windows.Forms.ToolStripButton();
             this.closeViewButton = new System.Windows.Forms.ToolStripButton();
             this.toolBarSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.addRecordButton = new System.Windows.Forms.ToolStripButton();
-            this.modifyRecordButton = new System.Windows.Forms.ToolStripButton();
-            this.deleteRecordButton = new System.Windows.Forms.ToolStripButton();
-            this.toolBarSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.filterText = new System.Windows.Forms.ToolStripLabel();
-            this.filterComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.labelStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
-            this.recordNumberStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuBar.SuspendLayout();
             this.toolBar.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -62,7 +51,6 @@
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewOption,
             this.mdiOption,
-            this.recordOption,
             this.quitProgramOption});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.MdiWindowListItem = this.mdiOption;
@@ -101,34 +89,6 @@
             this.mdiOption.Size = new System.Drawing.Size(49, 24);
             this.mdiOption.Text = "&MDI";
             // 
-            // recordOption
-            // 
-            this.recordOption.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addRecordOption,
-            this.modifyRecordOption,
-            this.deleteRecordOption});
-            this.recordOption.Name = "recordOption";
-            this.recordOption.Size = new System.Drawing.Size(54, 24);
-            this.recordOption.Text = "W&pis";
-            // 
-            // addRecordOption
-            // 
-            this.addRecordOption.Name = "addRecordOption";
-            this.addRecordOption.Size = new System.Drawing.Size(178, 24);
-            this.addRecordOption.Text = "Dodaj wpis";
-            // 
-            // modifyRecordOption
-            // 
-            this.modifyRecordOption.Name = "modifyRecordOption";
-            this.modifyRecordOption.Size = new System.Drawing.Size(178, 24);
-            this.modifyRecordOption.Text = "Modyfikuj wpis";
-            // 
-            // deleteRecordOption
-            // 
-            this.deleteRecordOption.Name = "deleteRecordOption";
-            this.deleteRecordOption.Size = new System.Drawing.Size(178, 24);
-            this.deleteRecordOption.Text = "Usuń wpis";
-            // 
             // quitProgramOption
             // 
             this.quitProgramOption.Name = "quitProgramOption";
@@ -141,13 +101,7 @@
             this.toolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addViewButton,
             this.closeViewButton,
-            this.toolBarSeparator,
-            this.addRecordButton,
-            this.modifyRecordButton,
-            this.deleteRecordButton,
-            this.toolBarSeparator2,
-            this.filterText,
-            this.filterComboBox});
+            this.toolBarSeparator});
             this.toolBar.Location = new System.Drawing.Point(0, 28);
             this.toolBar.Name = "toolBar";
             this.toolBar.Size = new System.Drawing.Size(784, 43);
@@ -180,59 +134,10 @@
             this.toolBarSeparator.Name = "toolBarSeparator";
             this.toolBarSeparator.Size = new System.Drawing.Size(6, 43);
             // 
-            // addRecordButton
-            // 
-            this.addRecordButton.Image = global::PAIN_WF_Pojazdy.Properties.Resources.add_record;
-            this.addRecordButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.addRecordButton.Name = "addRecordButton";
-            this.addRecordButton.Size = new System.Drawing.Size(88, 40);
-            this.addRecordButton.Text = "Dodaj wpis";
-            this.addRecordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // modifyRecordButton
-            // 
-            this.modifyRecordButton.Image = global::PAIN_WF_Pojazdy.Properties.Resources.modify_record;
-            this.modifyRecordButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.modifyRecordButton.Name = "modifyRecordButton";
-            this.modifyRecordButton.Size = new System.Drawing.Size(113, 40);
-            this.modifyRecordButton.Text = "Modyfikuj wpis";
-            this.modifyRecordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // deleteRecordButton
-            // 
-            this.deleteRecordButton.Image = global::PAIN_WF_Pojazdy.Properties.Resources.delete_record;
-            this.deleteRecordButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.deleteRecordButton.Name = "deleteRecordButton";
-            this.deleteRecordButton.Size = new System.Drawing.Size(79, 40);
-            this.deleteRecordButton.Text = "Usuń wpis";
-            this.deleteRecordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolBarSeparator2
-            // 
-            this.toolBarSeparator2.Name = "toolBarSeparator2";
-            this.toolBarSeparator2.Size = new System.Drawing.Size(6, 43);
-            // 
-            // filterText
-            // 
-            this.filterText.Name = "filterText";
-            this.filterText.Size = new System.Drawing.Size(37, 40);
-            this.filterText.Text = "Filtr:";
-            // 
-            // filterComboBox
-            // 
-            this.filterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filterComboBox.Items.AddRange(new object[] {
-            "wszystko",
-            "< 100 km/h",
-            ">= 100 km/h"});
-            this.filterComboBox.Name = "filterComboBox";
-            this.filterComboBox.Size = new System.Drawing.Size(121, 43);
-            // 
             // statusBar
             // 
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labelStatusBar,
-            this.recordNumberStatusBar});
+            this.labelStatusBar});
             this.statusBar.Location = new System.Drawing.Point(0, 636);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(784, 25);
@@ -245,13 +150,7 @@
             this.labelStatusBar.Size = new System.Drawing.Size(108, 20);
             this.labelStatusBar.Text = "Liczba wpisów:";
             // 
-            // recordNumberStatusBar
-            // 
-            this.recordNumberStatusBar.Name = "recordNumberStatusBar";
-            this.recordNumberStatusBar.Size = new System.Drawing.Size(17, 20);
-            this.recordNumberStatusBar.Text = "0";
-            // 
-            // mainWindow
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,7 +160,8 @@
             this.Controls.Add(this.menuBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Name = "mainWindow";
+            this.MainMenuStrip = this.menuBar;
+            this.Name = "MainWindow";
             this.Text = "Pojazdy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.menuBar.ResumeLayout(false);
@@ -279,27 +179,16 @@
 
         private System.Windows.Forms.MenuStrip menuBar;
         private System.Windows.Forms.ToolStripMenuItem viewOption;
-        private System.Windows.Forms.ToolStrip toolBar;
-        private System.Windows.Forms.StatusStrip statusBar;
         private System.Windows.Forms.ToolStripMenuItem mdiOption;
-        private System.Windows.Forms.ToolStripMenuItem recordOption;
         private System.Windows.Forms.ToolStripMenuItem quitProgramOption;
         private System.Windows.Forms.ToolStripMenuItem addViewOption;
         private System.Windows.Forms.ToolStripMenuItem closeViewOption;
-        private System.Windows.Forms.ToolStripMenuItem addRecordOption;
-        private System.Windows.Forms.ToolStripMenuItem modifyRecordOption;
-        private System.Windows.Forms.ToolStripMenuItem deleteRecordOption;
         private System.Windows.Forms.ToolStripButton addViewButton;
         private System.Windows.Forms.ToolStripButton closeViewButton;
         private System.Windows.Forms.ToolStripSeparator toolBarSeparator;
-        private System.Windows.Forms.ToolStripButton addRecordButton;
-        private System.Windows.Forms.ToolStripButton modifyRecordButton;
-        private System.Windows.Forms.ToolStripButton deleteRecordButton;
-        private System.Windows.Forms.ToolStripSeparator toolBarSeparator2;
-        private System.Windows.Forms.ToolStripComboBox filterComboBox;
-        private System.Windows.Forms.ToolStripLabel filterText;
         private System.Windows.Forms.ToolStripStatusLabel labelStatusBar;
-        private System.Windows.Forms.ToolStripStatusLabel recordNumberStatusBar;
+        public System.Windows.Forms.ToolStrip toolBar;
+        public System.Windows.Forms.StatusStrip statusBar;
     }
 }
 

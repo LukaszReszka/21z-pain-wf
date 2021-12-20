@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PAIN_WF_Pojazdy
 {
-    public partial class mainWindow : Form
+    public partial class MainWindow : Form
     {
 
         public bool IsClosingEnabled
@@ -18,14 +18,11 @@ namespace PAIN_WF_Pojazdy
             get; set;
         }
 
-        public mainWindow()
+        public MainWindow()
         {
             InitializeComponent();
             IsClosingEnabled = false;
-            VehiclesView view = new VehiclesView();
-            view.MdiParent = this;
-            view.FormClosed += new FormClosedEventHandler(this.VehiclesView_FormClosed);
-            view.Show();
+            addViewButton_Click(null, null);
         }
 
         private void quitProgramOption_Click(object sender, EventArgs e)

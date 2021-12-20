@@ -27,7 +27,16 @@ namespace PAIN_WF_Pojazdy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainWindow());
+            Application.Run(new MainWindow());
         }
     }
 }
+//Podpowiedzi:
+//ListView.SelectedIndices
+//// Adds a new item with ImageIndex 3
+//listView1.Items.Add("List item text", 3);
+// Removes the first item in the list.
+//listView1.Items.RemoveAt(0);
+// Clears all the items.
+//listView1.Items.Clear();
+//ListView.SelectedItems.Count == 2
