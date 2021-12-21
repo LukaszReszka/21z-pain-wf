@@ -276,7 +276,6 @@ namespace PAIN_WF_Pojazdy
             this.MinimumSize = new System.Drawing.Size(470, 300);
             this.Name = "VehicleInfo";
             this.Text = "Informacje o pojeździe";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VehicleInfo_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

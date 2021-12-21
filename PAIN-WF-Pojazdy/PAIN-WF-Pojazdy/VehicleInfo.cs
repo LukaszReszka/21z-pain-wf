@@ -53,7 +53,29 @@ namespace PAIN_WF_Pojazdy
         {
             InitializeComponent();
             vehicleTypeSwitcher_VehicleTypeChangedEvent(vehicleTypeSwitcher.VehicleType);
-            //TODO - konstruktor z argumentem, by uzupełnić wstępnie pola!!!
+        }
+
+        public VehicleInfo (Vehicle vehicle)
+        {
+            InitializeComponent();
+            vehicleTypeSwitcher_VehicleTypeChangedEvent(vehicleTypeSwitcher.VehicleType);
+            carBrandTextBox.Text = vehicle.Brand;
+            maxVelocityTextBox.Text = vehicle.maxVelocity.ToString();
+            productionDatePicker.Value = vehicle.productionDate;
+            if (vehicle.Type == "osobowy")
+            {
+                vehicleTypeSwitcher.VehicleType = VehicleType.Car;
+            }
+            else if (vehicle.Type == "ciężarowy")
+            {
+                vehicleTypeSwitcher.VehicleType = VehicleType.Truck;
+            }
+            else if (vehicle.Type == "jednoślad")
+            {
+                vehicleTypeSwitcher.VehicleType = VehicleType.Motocycle;
+            }
+            else
+                throw new Exception("Inapprioprate vehicle type !!!");
         }
 
         private void vehicleTypeSwitcher_VehicleTypeChangedEvent(VehicleType type)
@@ -126,11 +148,6 @@ namespace PAIN_WF_Pojazdy
         {
             if(ValidateChildren())
                 DialogResult = DialogResult.OK;
-        }
-
-        private void VehicleInfo_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
         }
     }
 }

@@ -75,6 +75,7 @@ namespace PAIN_WF_Pojazdy
             this.vehiclesList.TabIndex = 0;
             this.vehiclesList.UseCompatibleStateImageBehavior = false;
             this.vehiclesList.View = System.Windows.Forms.View.Details;
+            this.vehiclesList.SelectedIndexChanged += new System.EventHandler(this.vehiclesList_SelectedIndexChanged);
             // 
             // vehicleBrand
             // 
@@ -103,28 +104,31 @@ namespace PAIN_WF_Pojazdy
             this.modifyRecordContextMenu,
             this.deleteRecordContextMenu});
             this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(179, 76);
+            this.contextMenu.Size = new System.Drawing.Size(181, 98);
             // 
             // addRecordContextMenu
             // 
             this.addRecordContextMenu.Image = global::PAIN_WF_Pojazdy.Properties.Resources.add_record;
             this.addRecordContextMenu.Name = "addRecordContextMenu";
-            this.addRecordContextMenu.Size = new System.Drawing.Size(178, 24);
+            this.addRecordContextMenu.Size = new System.Drawing.Size(180, 24);
             this.addRecordContextMenu.Text = "Dodaj wpis";
+            this.addRecordContextMenu.Click += new System.EventHandler(this.addRecordButton_Click);
             // 
             // modifyRecordContextMenu
             // 
             this.modifyRecordContextMenu.Image = global::PAIN_WF_Pojazdy.Properties.Resources.modify_record;
             this.modifyRecordContextMenu.Name = "modifyRecordContextMenu";
-            this.modifyRecordContextMenu.Size = new System.Drawing.Size(178, 24);
+            this.modifyRecordContextMenu.Size = new System.Drawing.Size(180, 24);
             this.modifyRecordContextMenu.Text = "Modyfikuj wpis";
+            this.modifyRecordContextMenu.Click += new System.EventHandler(this.modifyRecordButton_Click);
             // 
             // deleteRecordContextMenu
             // 
             this.deleteRecordContextMenu.Image = global::PAIN_WF_Pojazdy.Properties.Resources.delete_record;
             this.deleteRecordContextMenu.Name = "deleteRecordContextMenu";
-            this.deleteRecordContextMenu.Size = new System.Drawing.Size(178, 24);
+            this.deleteRecordContextMenu.Size = new System.Drawing.Size(180, 24);
             this.deleteRecordContextMenu.Text = "Usuń wpis";
+            this.deleteRecordContextMenu.Click += new System.EventHandler(this.deleteRecordButton_Click);
             // 
             // menuBar
             // 
@@ -151,21 +155,27 @@ namespace PAIN_WF_Pojazdy
             // 
             // addRecordOption
             // 
+            this.addRecordOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.add_record;
             this.addRecordOption.Name = "addRecordOption";
             this.addRecordOption.Size = new System.Drawing.Size(180, 24);
             this.addRecordOption.Text = "Dodaj wpis";
+            this.addRecordOption.Click += new System.EventHandler(this.addRecordButton_Click);
             // 
             // modifyRecordOption
             // 
+            this.modifyRecordOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.modify_record;
             this.modifyRecordOption.Name = "modifyRecordOption";
             this.modifyRecordOption.Size = new System.Drawing.Size(180, 24);
             this.modifyRecordOption.Text = "Modyfikuj wpis";
+            this.modifyRecordOption.Click += new System.EventHandler(this.modifyRecordButton_Click);
             // 
             // deleteRecordOption
             // 
+            this.deleteRecordOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.delete_record;
             this.deleteRecordOption.Name = "deleteRecordOption";
             this.deleteRecordOption.Size = new System.Drawing.Size(180, 24);
             this.deleteRecordOption.Text = "Usuń wpis";
+            this.deleteRecordOption.Click += new System.EventHandler(this.deleteRecordButton_Click);
             // 
             // toolBar
             // 
@@ -191,6 +201,7 @@ namespace PAIN_WF_Pojazdy
             this.addRecordButton.Size = new System.Drawing.Size(88, 40);
             this.addRecordButton.Text = "Dodaj wpis";
             this.addRecordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.addRecordButton.Click += new System.EventHandler(this.addRecordButton_Click);
             // 
             // modifyRecordButton
             // 
@@ -200,6 +211,7 @@ namespace PAIN_WF_Pojazdy
             this.modifyRecordButton.Size = new System.Drawing.Size(113, 40);
             this.modifyRecordButton.Text = "Modyfikuj wpis";
             this.modifyRecordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.modifyRecordButton.Click += new System.EventHandler(this.modifyRecordButton_Click);
             // 
             // deleteRecordButton
             // 
@@ -209,6 +221,7 @@ namespace PAIN_WF_Pojazdy
             this.deleteRecordButton.Size = new System.Drawing.Size(79, 40);
             this.deleteRecordButton.Text = "Usuń wpis";
             this.deleteRecordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.deleteRecordButton.Click += new System.EventHandler(this.deleteRecordButton_Click);
             // 
             // toolBarSeparator
             // 
@@ -230,6 +243,7 @@ namespace PAIN_WF_Pojazdy
             ">= 100 km/h"});
             this.filterComboBox.Name = "filterComboBox";
             this.filterComboBox.Size = new System.Drawing.Size(121, 43);
+            this.filterComboBox.SelectedIndexChanged += new System.EventHandler(this.filterComboBox_SelectedIndexChanged);
             // 
             // statusBar
             // 
@@ -254,9 +268,9 @@ namespace PAIN_WF_Pojazdy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.ContextMenuStrip = this.contextMenu;
-            this.Controls.Add(this.statusBar);
-            this.Controls.Add(this.toolBar);
             this.Controls.Add(this.menuBar);
+            this.Controls.Add(this.toolBar);
+            this.Controls.Add(this.statusBar);
             this.Controls.Add(this.vehiclesList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuBar;

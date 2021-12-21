@@ -70,6 +70,7 @@
             // 
             // addViewOption
             // 
+            this.addViewOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.add_view;
             this.addViewOption.Name = "addViewOption";
             this.addViewOption.Size = new System.Drawing.Size(180, 24);
             this.addViewOption.Text = "Dodaj widok";
@@ -78,6 +79,7 @@
             // closeViewOption
             // 
             this.closeViewOption.Enabled = false;
+            this.closeViewOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.close_view;
             this.closeViewOption.Name = "closeViewOption";
             this.closeViewOption.Size = new System.Drawing.Size(180, 24);
             this.closeViewOption.Text = "Zamknij widok";

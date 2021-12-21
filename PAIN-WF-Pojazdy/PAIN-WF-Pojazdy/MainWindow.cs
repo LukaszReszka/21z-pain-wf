@@ -12,6 +12,15 @@ namespace PAIN_WF_Pojazdy
 {
     public partial class MainWindow : Form
     {
+        public delegate void ModelEvent(Vehicle vehicle);
+        public event ModelEvent AddedNewVehicleEvent;
+        public event ModelEvent DeletedVehicleEvent;
+        public event ModelEvent ModifiedVehicleEvent;
+        public void TriggerAddedNewVehicleEvent(Vehicle v) => AddedNewVehicleEvent?.Invoke(v);
+        public void TriggerDeletedVehicleEvent(Vehicle v) => DeletedVehicleEvent?.Invoke(v);
+        public void TriggerModifiedVehicleEvent(Vehicle v) => ModifiedVehicleEvent?.Invoke(v);
+
+        public List<Vehicle> Model;
 
         public bool IsClosingEnabled
         {
@@ -21,6 +30,7 @@ namespace PAIN_WF_Pojazdy
         public MainWindow()
         {
             InitializeComponent();
+            Model = new List<Vehicle>();
             IsClosingEnabled = false;
             addViewButton_Click(null, null);
         }
@@ -35,6 +45,10 @@ namespace PAIN_WF_Pojazdy
             VehiclesView view = new VehiclesView();
             view.MdiParent = this;
             view.FormClosed += new FormClosedEventHandler(this.VehiclesView_FormClosed);
+            AddedNewVehicleEvent += view.HandleAddedNewVehicleEvent;
+            DeletedVehicleEvent += view.HandleDeletedVehicleEvent;
+            ModifiedVehicleEvent += view.HandleModifiedVehicleEvent;
+            view.SetFilter();
             view.Show();
 
             if (this.MdiChildren.Length > 1)
