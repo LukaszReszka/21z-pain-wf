@@ -32,9 +32,7 @@ namespace PAIN_WF_Pojazdy
 
         public void HandleAddedNewVehicleEvent(Vehicle newVehicle)
         {
-            if (currentFilter == FilterIndex.AllRecords
-                || (currentFilter == FilterIndex.LessThan100 && newVehicle.maxVelocity < 100)
-                || (currentFilter == FilterIndex.MoreEqual100 && newVehicle.maxVelocity >= 100))
+            if (doesVehicleMatchViewFilter(newVehicle))
             {
                 AddVehicleToList(newVehicle);
                 recordCounter.Text = vehiclesList.Items.Count.ToString();
@@ -43,15 +41,18 @@ namespace PAIN_WF_Pojazdy
 
         public void HandleDeletedVehicleEvent(Vehicle deletedVehicle)
         {
-            foreach (ListViewItem item in vehiclesList.Items)
+            if (doesVehicleMatchViewFilter(deletedVehicle))
             {
-                if(Object.ReferenceEquals(item.Tag, deletedVehicle))
+                foreach (ListViewItem item in vehiclesList.Items)
                 {
-                    vehiclesList.Items.Remove(item);
-                    break;
+                    if (Object.ReferenceEquals(item.Tag, deletedVehicle))
+                    {
+                        vehiclesList.Items.Remove(item);
+                        break;
+                    }
                 }
+                recordCounter.Text = vehiclesList.Items.Count.ToString();
             }
-            recordCounter.Text = vehiclesList.Items.Count.ToString();
         }
 
         public void HandleModifiedVehicleEvent(Vehicle modifiedVehicle)
@@ -61,14 +62,27 @@ namespace PAIN_WF_Pojazdy
                 if (Object.ReferenceEquals(vehiclesList.Items[i].Tag, modifiedVehicle))
                 {
                     vehiclesList.Items.RemoveAt(i);
-                    string[] row = { modifiedVehicle.Brand, modifiedVehicle.maxVelocity.ToString(), 
+                    if (doesVehicleMatchViewFilter(modifiedVehicle))
+                    {
+                        string[] row = { modifiedVehicle.Brand, modifiedVehicle.maxVelocity.ToString(),
                         modifiedVehicle.productionDate.ToString("d"), modifiedVehicle.Type };
-                    var listViewItem = new ListViewItem(row);
-                    listViewItem.Tag = modifiedVehicle;
-                    vehiclesList.Items.Insert(i, listViewItem);
-                    break;
+                        var listViewItem = new ListViewItem(row);
+                        listViewItem.Tag = modifiedVehicle;
+                        vehiclesList.Items.Insert(i, listViewItem);
+                        return;
+                    }
+                    recordCounter.Text = vehiclesList.Items.Count.ToString();
+                    return;
                 }
             }
+            HandleAddedNewVehicleEvent(modifiedVehicle);
+        }
+
+        private bool doesVehicleMatchViewFilter(Vehicle vehicle)
+        {
+            return (currentFilter == FilterIndex.AllRecords
+                || (currentFilter == FilterIndex.LessThan100 && vehicle.maxVelocity < 100)
+                || (currentFilter == FilterIndex.MoreEqual100 && vehicle.maxVelocity >= 100));
         }
 
         private void VehiclesView_FormClosing(object sender, FormClosingEventArgs e)

@@ -68,6 +68,7 @@ namespace PAIN_WF_Pojazdy
             this.productionDate,
             this.vehicleType});
             this.vehiclesList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vehiclesList.FullRowSelect = true;
             this.vehiclesList.HideSelection = false;
             this.vehiclesList.Location = new System.Drawing.Point(0, 0);
             this.vehiclesList.Name = "vehiclesList";
@@ -104,13 +105,13 @@ namespace PAIN_WF_Pojazdy
             this.modifyRecordContextMenu,
             this.deleteRecordContextMenu});
             this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(181, 98);
+            this.contextMenu.Size = new System.Drawing.Size(179, 76);
             // 
             // addRecordContextMenu
             // 
             this.addRecordContextMenu.Image = global::PAIN_WF_Pojazdy.Properties.Resources.add_record;
             this.addRecordContextMenu.Name = "addRecordContextMenu";
-            this.addRecordContextMenu.Size = new System.Drawing.Size(180, 24);
+            this.addRecordContextMenu.Size = new System.Drawing.Size(178, 24);
             this.addRecordContextMenu.Text = "Dodaj wpis";
             this.addRecordContextMenu.Click += new System.EventHandler(this.addRecordButton_Click);
             // 
@@ -118,7 +119,7 @@ namespace PAIN_WF_Pojazdy
             // 
             this.modifyRecordContextMenu.Image = global::PAIN_WF_Pojazdy.Properties.Resources.modify_record;
             this.modifyRecordContextMenu.Name = "modifyRecordContextMenu";
-            this.modifyRecordContextMenu.Size = new System.Drawing.Size(180, 24);
+            this.modifyRecordContextMenu.Size = new System.Drawing.Size(178, 24);
             this.modifyRecordContextMenu.Text = "Modyfikuj wpis";
             this.modifyRecordContextMenu.Click += new System.EventHandler(this.modifyRecordButton_Click);
             // 
@@ -126,7 +127,7 @@ namespace PAIN_WF_Pojazdy
             // 
             this.deleteRecordContextMenu.Image = global::PAIN_WF_Pojazdy.Properties.Resources.delete_record;
             this.deleteRecordContextMenu.Name = "deleteRecordContextMenu";
-            this.deleteRecordContextMenu.Size = new System.Drawing.Size(180, 24);
+            this.deleteRecordContextMenu.Size = new System.Drawing.Size(178, 24);
             this.deleteRecordContextMenu.Text = "Usuń wpis";
             this.deleteRecordContextMenu.Click += new System.EventHandler(this.deleteRecordButton_Click);
             // 
@@ -157,7 +158,7 @@ namespace PAIN_WF_Pojazdy
             // 
             this.addRecordOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.add_record;
             this.addRecordOption.Name = "addRecordOption";
-            this.addRecordOption.Size = new System.Drawing.Size(180, 24);
+            this.addRecordOption.Size = new System.Drawing.Size(178, 24);
             this.addRecordOption.Text = "Dodaj wpis";
             this.addRecordOption.Click += new System.EventHandler(this.addRecordButton_Click);
             // 
@@ -165,7 +166,7 @@ namespace PAIN_WF_Pojazdy
             // 
             this.modifyRecordOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.modify_record;
             this.modifyRecordOption.Name = "modifyRecordOption";
-            this.modifyRecordOption.Size = new System.Drawing.Size(180, 24);
+            this.modifyRecordOption.Size = new System.Drawing.Size(178, 24);
             this.modifyRecordOption.Text = "Modyfikuj wpis";
             this.modifyRecordOption.Click += new System.EventHandler(this.modifyRecordButton_Click);
             // 
@@ -173,7 +174,7 @@ namespace PAIN_WF_Pojazdy
             // 
             this.deleteRecordOption.Image = global::PAIN_WF_Pojazdy.Properties.Resources.delete_record;
             this.deleteRecordOption.Name = "deleteRecordOption";
-            this.deleteRecordOption.Size = new System.Drawing.Size(180, 24);
+            this.deleteRecordOption.Size = new System.Drawing.Size(178, 24);
             this.deleteRecordOption.Text = "Usuń wpis";
             this.deleteRecordOption.Click += new System.EventHandler(this.deleteRecordButton_Click);
             // 
